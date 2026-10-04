@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa del Sol Mexican Restaurant</title>
+    
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/order.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <img src="images/agave-left.png" class="agave-left" alt="">
+
+        <img src="images/logo-banner.png" class="logo-banner" alt="Casa Del Sol">
+
+        <img src="images/agave-right.png" class="agave-right" alt="">
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+
+                <div class="dropdown-content">
+                    <a href="calendar.html">Calendar</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="menulist.html">Menu List</a>
+                    <a href="assignment_gallery/js05.html">Interactive Menu Gallery</a>
+                </div>
+            </div>
+
+            <a href="order.html">Order</a>
+            <a href="location.html">Location</a>
+            <a href="contact.html">Contact</a>
+            <a href="sitemap.html">Site Map</a>
+        </nav>
+    </header>
+
+    <main class="order-page">
+
+    <h2>Place Your Order</h2>
+
+    <form>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+            <tr>
+                <td>Birria Tacos</td>
+                <td>$22.99</td>
+                <td><input type="number" id="birria" value="0" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Enchiladas de Mole</td>
+                <td>$24.99</td>
+                <td><input type="number" id="mole" value="0" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Fish Tacos</td>
+                <td>$22.99</td>
+                <td><input type="number" id="shrimp" value="0" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Pozole</td>
+                <td>$22.99</td>
+                <td><input type="number" id="pozole" value="0" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Chilaquiles</td>
+                <td>$20.99</td>
+                <td><input type="number" id="chilaquiles" value="0" min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Tamales</td>
+                <td>$14.99</td>
+                <td><input type="number" id="tamales" value="0" min="0"></td>
+            </tr>
+
+        </table>
+
+        <button type="button" onclick="calculateOrder()">Calculate Total</button>
+    </form>
+
+    <div class="order-total">
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="tax">Tax 13%: $0.00</p>
+        <p id="total">Total: $0.00</p>
+    </div>
+ 
+    
+    <button type="button" onclick="placeOrder()" class="place-order-btn">
+    Place Your Order
+    </button>
+
+        <p id="orderMsg"></p>
+
+</main>
+<footer>
+    <div class="footer-links">
+        <a href="order.html">Order Online</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="sitemap.html">Site Map</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+     <p>&copy; 2026 Casa del Sol Restaurant. All Rights Reserved.</p>
+</footer>
+
+
+
+</body>
+
+</html>

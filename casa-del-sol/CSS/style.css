@@ -636,3 +636,205 @@ footer p {
     font-size: 13px;
     color: #777;
 }
+
+/* Keep padding inside element widths and constrain media to its container. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Home uses a native disclosure; other pages can retain their menu button. */
+summary.dropbtn {
+    list-style: none;
+    padding: 12px;
+}
+
+summary.dropbtn::-webkit-details-marker {
+    display: none;
+}
+
+details.dropdown:not([open]) .dropdown-content {
+    display: none;
+}
+
+details.dropdown[open] .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    z-index: 10;
+    min-width: 220px;
+    max-width: calc(100vw - 32px);
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav a:focus-visible,
+.dropbtn:focus-visible {
+    outline: 3px solid #f4c542;
+    outline-offset: 3px;
+}
+
+/* Tablets: prevent decorative images from covering the logo. */
+@media (max-width: 1200px) {
+    .agave-left,
+    .agave-right {
+        width: 24%;
+    }
+
+    .logo-banner {
+        width: 38%;
+    }
+
+    nav a {
+        margin: 0 12px;
+        font-size: 18px;
+    }
+}
+
+/* Phones: stack content and give navigation links comfortable touch targets. */
+@media (max-width: 768px) {
+    .agave-left,
+    .agave-right {
+        display: none;
+    }
+
+    .logo-banner {
+        width: min(420px, 85%);
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 10px;
+    }
+
+    nav > a,
+    nav > .dropdown {
+        flex: 0 0 calc(50% - 4px);
+        min-width: 0;
+        margin: 0;
+    }
+
+    nav > a,
+    .dropbtn {
+        padding: 12px 6px;
+        min-height: 44px;
+        font-size: 18px;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
+
+    .hero,
+    .about-hero {
+        height: auto;
+        min-height: 65vh;
+        padding: 48px 20px;
+    }
+
+    .hero h2 {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.15;
+        margin: 0 0 20px;
+    }
+
+    .hero p,
+    .about-hero p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .home-about {
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 20px;
+    }
+
+    .home-about img,
+    .home-about-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home-about-text {
+        font-size: 18px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .restaurant-name {
+        font-size: 36px;
+    }
+
+    .menu-page,
+    .order-page,
+    .contact-page,
+    .location-page,
+    .gallery-page,
+    .calendar-page,
+    .sitemap-page {
+        padding: 24px 16px;
+    }
+
+    .menu-card {
+        width: min(300px, 100%);
+    }
+
+    .gallery-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Wide tables scroll independently without widening the whole page. */
+    .order-page table,
+    .calendar-table,
+    #calendar {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .order-page th,
+    .order-page td {
+        padding: 10px;
+    }
+
+    #calendar th,
+    #calendar td {
+        min-width: 100px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footer-links a {
+        margin: 0;
+    }
+}

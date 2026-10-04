@@ -26,12 +26,13 @@
 
 
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="home.html">Home</a>
             <a href="about.html">About</a>
 
-            <div class="dropdown">
-                <button class="dropbtn">Menu</button>
+            <!-- Native disclosure supports touch and keyboard navigation. -->
+            <details class="dropdown">
+                <summary class="dropbtn">Menu</summary>
 
                 <div class="dropdown-content">
                     <a href="calendar.html">Calendar</a>
@@ -39,7 +40,7 @@
                     <a href="menulist.html">Menu List</a>
                     <a href="assignment_gallery/js05.html">Interactive Menu Gallery</a>
                 </div>
-            </div>
+            </details>
 
             <a href="order.html">Order</a>
             <a href="location.html">Location</a>
@@ -71,6 +72,7 @@
             Offers a true taste of Mexico in a warm and welcoming atmosphere.
             Our restaurant is inspired by the traditional Mexican cuisine of the state of Guerrero, bringing together authentic recipes,
             fresh ingredients, and rich cultural flavors.
+        </p>
 
         <p>
             Enjoy handmade tortillas, rich salsas, classic tacos, enchiladas, tamales, and other dishes inspired
